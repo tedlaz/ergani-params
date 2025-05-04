@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY ergani_parameters.db .
-COPY searchpar .
+COPY searchpar.py .
 
 
 # Expose the port the app runs on
