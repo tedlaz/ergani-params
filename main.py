@@ -40,7 +40,7 @@ def grup(text: str) -> str:
     text = "".join(c for c in text if not unicodedata.combining(c))
     text = re.sub(r"[^Α-Ω0-9A-Z\s]", "", text)
     text = re.sub(r"\s+", " ", text)  # Replace multiple spaces with a single space
-    return text
+    return text.strip()
 
 
 class StorageSqlite:
