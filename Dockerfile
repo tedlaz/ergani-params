@@ -11,11 +11,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY ergani_parameters.db .
-COPY searchpar.py .
+COPY main.py .
 
 
 # Expose the port the app runs on
 EXPOSE 8040
 
 # Command to run the application
-CMD ["uvicorn", "searchpar:app", "--host", "0.0.0.0", "--port", "8040"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8040"]

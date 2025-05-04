@@ -85,7 +85,12 @@ async def lifespan(app: FastAPI):
         print("Database closed !!!")
 
 
-app = FastAPI(title="Ergani Parameter Tablew API", version="0.1.0", lifespan=lifespan)
+app = FastAPI(
+    title="Ergani Parameter Tables API",
+    version="0.1.1",
+    lifespan=lifespan,
+    description="API for searching parameters from the ERGANI database.",
+)
 
 app.add_middleware(
     CORSMiddleware,
