@@ -1,0 +1,13 @@
+services:
+  erganiparams:
+    image: tedlaz/erganiparams:latest
+    build: .
+    container_name: erganiparams
+    ports:
+      - '8040:8040'
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:8040/health/ping']
+      interval: 30s
+      timeout: 10s
+      retries: 3

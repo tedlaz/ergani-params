@@ -123,6 +123,11 @@ async def get_tables():
     return {"tables": tables}
 
 
+@app.get("/health/ping")
+async def health():
+    return {"status": "ok"}
+
+
 if __name__ == "__main__":
     import uvicorn
 
